@@ -1,0 +1,140 @@
+<div class="game-board" [ngClass]="{ 'card-selected': isGameBoardCardSelected}">
+
+  <div class="hacker-area">
+
+    <h1>
+      <strong>HACKER CARDS</strong> <br /> Choose the best card to stop the hackers' attack
+    </h1>
+
+    <div class="hacker-area-menu-option">
+      <button class="restart hacker-area-option" (click)="handleHelpModal(true)">Help</button>
+      <button class="restart hacker-area-option" (click)="handleExitModal(true)">Exit</button>
+    </div>
+
+    <app-help-modal [isModalOpen]="isHelpModalOpen" (closeEmit)="handleHelpModal(false)">
+    </app-help-modal>
+
+    <div class="stats hacker-stats">
+      <div class="life-bar">
+        <div class="life-left hacker-color" [ngStyle]="{'height': hackerPercent+'%'}"></div>
+      </div>
+      <div class="life-total">{{ hackerLife }}</div>
+      <div class="thumbnail" [ngClass]="{ 'ouch': isCompareCards == 2}">👨🏻‍💻</div>
+      <div class="name">Hacker</div>
+    </div>
+
+    <div class="card hacker-card hacker-color showCard" [ngClass]="{ 
+        'reveal-power': isRevealHackerPower,
+        'better-card': isCompareCards == 1, 
+        'worse-card': isCompareCards == 2, 
+        'tie-card': isCompareCards == 3,
+        'none-card': isWinnerMessage
+      }">
+      <div class="text">{{ hackerCard.description }}</div>
+      <div class="power">{{ hackerCard.power }}</div>
+    </div>
+
+    <!-- Explanation card -->
+    <div class="question-mark-icon" (click)="toggleExplanationCard()">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <line x1="12" y1="16" x2="12" y2="12" />
+        <line x1="12" y1="8" x2="12" y2="8" />
+      </svg>
+
+    </div>
+
+    <div class="card-explanation none-color" [ngStyle]="{'opacity': isExplanationCard ? 1 : 0}"
+      [ngClass]="{'showCard': isExplanationCard}">
+      <div>{{ explanationCard }}</div>
+    </div>
+
+  </div>
+
+  <div class="player-area">
+
+    <div class="stats player-stats">
+      <div class="life-bar">
+        <div class="life-left player-color" [ngStyle]="{'height': playerPercent+'%'}"></div>
+      </div>
+      <div class="life-total">{{ playerLife }}</div>
+      <div class="thumbnail" [ngClass]="{ 'ouch': isCompareCards == 1}">👦🏻</div>
+      <div class="name">You</div>
+    </div>
+
+    <div class="card player-card player-color showCard" [ngClass]="{
+        'reveal-power': isRevealPlayerPower,
+        'better-card': isCompareCards == 2 && card === selectedCard,
+        'worse-card': isCompareCards == 1 && card === selectedCard,
+        'tie-card': isCompareCards == 3 && card === selectedCard,
+        'none-card': isWinnerMessage
+     }" *ngFor="let card of playerCards" (click)="cardClicked(card, hackerCard)">
+      <div class="text">{{ card.description }}</div>
+      <div class="power">{{ card.power }}</div>
+    </div>
+
+    <button class="next-turn" [ngClass]="{ 'display-block': isNextButton }" (click)="nextTurn()">Next!</button>
+    <!--[disabled]="isNextButton || roundFinished"-->
+
+  </div>
+</div>
+
+<div class="winner-section" *ngIf="isWinnerMessage" [ngStyle]="{ 'display': 'flex' }"
+  [ngClass]="{ 'player-color': winner.name === 'Player', 'hacker-color': winner.name === 'Hacker', 'none-color': winner.name === 'None' }">
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <span class="winner-message">{{ winner.message }}</span>
+    <button class="restart" *ngIf="difficulty === 'scenario_tutorial'" [routerLink]="'/home'">End Tutorial</button>
+    <button class="restart" *ngIf="difficulty != 'scenario_tutorial'" (click)="restartGame()">Play Again</button>
+  </div>
+</div>
+
+<!-- Modal Exit -->
+<div class="modal" [ngClass]="{'open': isExitModalOpen}">
+  <div class="modal-overlay" [ngClass]="{'open': isExitModalOpen}">
+    <div class="modal-content" style="background-color: #c13116">
+
+      <!-- Modal head -->
+      <div class="modal-header">
+        <p class="modal-header-title">Exit</p>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body" style="text-align: center;">
+        <p>Are you sure you want to leave the game?</p>
+      </div>
+
+      <!-- Button Container -->
+      <div class="button-container">
+        <button (click)="responseExitModal(false)">No</button>
+        <div style="padding-left: 5rem; padding-right: 5rem;"></div>
+        <button (click)="responseExitModal(true)">Yes</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal Error Scenario -->
+<div class="modal" [ngClass]="{'open': isErrorScenarioModalOpen}">
+  <div class="modal-overlay" [ngClass]="{'open': isErrorScenarioModalOpen}">
+    <div class="modal-content" style="background-color: #c13116">
+
+      <!-- Modal head -->
+      <div class="modal-header">
+        <p class="modal-header-title">Error loading scenario</p>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body" style="text-align: center;">
+        <p>The game has occurred an error uploading the scenario. Confirming will take you back to the home screen.</p>
+      </div>
+
+      <!-- Button Container -->
+      <div class="button-container">
+        <button (click)="responseExitModal(true)">Home</button>
+      </div>
+
+    </div>
+  </div>
+</div>

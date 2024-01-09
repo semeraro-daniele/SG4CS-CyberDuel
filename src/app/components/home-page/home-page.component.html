@@ -1,0 +1,47 @@
+<div class="game-board">
+
+    <div class="hacker-area">
+        <h1 style="padding-bottom: 2rem;">
+            <strong>Welcome to CyberDuel!</strong>
+        </h1>
+    </div>
+
+    <div class="player-area">
+        <button class="start-game" style="cursor: pointer;" (click)="handleModal(true)">Play the Game</button>
+        <div style="display: flex; align-items: end;">
+            <i>Credits: Alemanno Giuseppe, Caiulo Fabio, Semeraro Daniele</i>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" [ngClass]="{'open': isModalOpen}">
+    <div class="modal-overlay" [ngClass]="{'open': isModalOpen}">
+        <div class="modal-content" style="background-color: #c13116">
+
+            <!-- Modal head -->
+            <div class="modal-header">
+                <h1 class="modal-header-title">Difficulty</h1>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body" style="align-items: center;">
+
+                <div style="display: flex; flex-direction: row; justify-items: center; padding-bottom: 2rem;">
+                    <button (click)="startGame('easy')" style="width: 8rem; margin: 0.5rem;">Easy</button>
+                    <button (click)="startGame('medium')" style="width: 8rem; margin: 0.5rem;">Medium</button>
+                    <button (click)="startGame('hard')" style="width: 8rem; margin: 0.5rem;">Hard</button>
+                </div>
+
+                <button (click)="startGame('tutorial')" style="width: 8rem; margin: 0.5rem;">Tutorial</button>
+
+            </div>
+
+            <!-- Button Container -->
+            <div class="button-container" style="display: flex; justify-content: space-around;">
+                <button (click)="handleModal(false)">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>

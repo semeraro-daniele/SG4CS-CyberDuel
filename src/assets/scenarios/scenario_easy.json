@@ -1,0 +1,296 @@
+[
+  {
+    "hackerCard": {
+      "description": "I posted harmful content about you on social media to harass and embarrass you.",
+      "power": 4
+    },
+    "playerCards": [
+      {
+        "description": "I regularly review and adjust my social media privacy settings.",
+        "power": 5
+      },
+      {
+        "description": "I rarely check or update my social media privacy settings.",
+        "power": 3
+      },
+      {
+        "description": "I don't use social media or share personal information online.",
+        "power": 1
+      }
+    ],
+    "explanation": "The hacker engages in cyberbullying by posting harmful content. Regularly reviewing and adjusting social media privacy settings helps prevent such attacks."
+  },
+  {
+    "hackerCard": {
+      "description": "I sent you an email pretending to be a colleague and asked for sensitive company information.",
+      "power": 3
+    },
+    "playerCards": [
+      {
+        "description": "I always verify the identity of the sender before sharing sensitive information.",
+        "power": 5
+      },
+      {
+        "description": "I sometimes provide sensitive information without verifying the sender.",
+        "power": 4
+      },
+      {
+        "description": "I freely share sensitive information in response to email requests.",
+        "power": 1
+      }
+    ],
+    "explanation": "The hacker attempts phishing by posing as a colleague. Verifying the identity of email senders is crucial to prevent unauthorized information sharing."
+  },
+  {
+    "hackerCard": {
+      "description": "I accessed your personal data without your consent, violating GDPR regulations.",
+      "power": 3
+    },
+    "playerCards": [
+      {
+        "description": "I am well-informed about GDPR regulations and actively manage my data privacy settings.",
+        "power": 5
+      },
+      {
+        "description": "I know about GDPR but rarely check or update my data privacy settings.",
+        "power": 3
+      },
+      {
+        "description": "I am not familiar with GDPR regulations and don't manage my data privacy settings.",
+        "power": 1
+      }
+    ],
+    "explanation": "The hacker breaches GDPR regulations by accessing personal data without consent. Being informed about and actively managing data privacy settings is essential for compliance."
+  },
+  {
+    "hackerCard": {
+      "description": "I guessed your password and gained unauthorized access to your accounts.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "I use strong, unique passwords for all my accounts.",
+        "power": 4
+      },
+      {
+        "description": "I occasionally change my passwords, but they are not very strong.",
+        "power": 3
+      },
+      {
+        "description": "I use the same password across multiple accounts.",
+        "power": 1
+      }
+    ],
+    "explanation": "The hacker gains unauthorized access through password guessing. Using strong, unique passwords enhances account security."
+  },
+  {
+    "hackerCard": {
+      "description": "I eavesdropped on your unsecured Wi-Fi network and monitored your internet activity.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "I always use a secure, password-protected Wi-Fi network.",
+        "power": 4
+      },
+      {
+        "description": "I use open Wi-Fi networks without considering security risks.",
+        "power": 2
+      },
+      {
+        "description": "I don't use Wi-Fi networks; I prefer mobile data for internet access.",
+        "power": 1
+      }
+    ],
+    "explanation": "The hacker eavesdrops on an unsecured Wi-Fi network to monitor internet activity. Using secure, password-protected Wi-Fi networks helps prevent unauthorized access."
+  },
+  {
+    "hackerCard": {
+      "description": "I installed malicious software on your computer to gain control over your system.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "I regularly update my antivirus software and perform system scans.",
+        "power": 4
+      },
+      {
+        "description": "I have antivirus software but rarely update or scan my system.",
+        "power": 3
+      },
+      {
+        "description": "I don't use antivirus software; it slows down my computer.",
+        "power": 1
+      }
+    ],
+    "explanation": "The hacker installs malicious software to control the target's system. Regularly updating antivirus software and performing system scans enhance security."
+  },
+  {
+    "hackerCard": {
+      "description": "I attempted to log in to your account using various common passwords.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "I enable two-factor authentication for all my accounts.",
+        "power": 4
+      },
+      {
+        "description": "I use common passwords across multiple accounts.",
+        "power": 2
+      },
+      {
+        "description": "I find two-factor authentication inconvenient and don't use it.",
+        "power": 1
+      }
+    ],
+    "explanation": "The hacker tries common passwords to gain unauthorized access. Enabling two-factor authentication adds an extra layer of security to accounts."
+  },
+  {
+    "hackerCard": {
+      "description": "I sent you a link that, when clicked, would install malware on your device.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "I never click on links from unknown or untrusted sources.",
+        "power": 4
+      },
+      {
+        "description": "I occasionally click on links without checking their authenticity.",
+        "power": 3
+      },
+      {
+        "description": "I click on any interesting link I come across online.",
+        "power": 1
+      }
+    ],
+    "explanation": "The hacker attempts to install malware through a deceptive link. Avoiding clicking on links from unknown sources is crucial for preventing malware infections."
+  },
+  {
+    "hackerCard": {
+      "description": "I used a brute force attack to gain access to your email account.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "I use complex passwords with a mix of letters, numbers, and symbols.",
+        "power": 4
+      },
+      {
+        "description": "I use simple passwords that are easy to remember.",
+        "power": 2
+      },
+      {
+        "description": "I use the same password for all my email accounts.",
+        "power": 1
+      }
+    ],
+    "explanation": "The hacker employs a brute force attack to crack passwords. Using complex, unique passwords enhances email account security."
+  },
+  {
+    "hackerCard": {
+      "description": "I attempted to gain unauthorized access to your network by exploiting unpatched vulnerabilities.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "I regularly update software and apply security patches to my network.",
+        "power": 4
+      },
+      {
+        "description": "I update software occasionally but don't pay much attention to security patches.",
+        "power": 3
+      },
+      {
+        "description": "I rarely update software; it's time-consuming.",
+        "power": 1
+      }
+    ],
+    "explanation": "The hacker exploits unpatched vulnerabilities to access the target's network. Regularly updating software and applying security patches is crucial for network security."
+  },
+  {
+    "hackerCard": {
+      "description": "I attempted to guess your security questions to gain access to your online accounts.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "I use unique security questions with answers only I would know.",
+        "power": 4
+      },
+      {
+        "description": "I use common security questions with answers that are easy to guess.",
+        "power": 2
+      },
+      {
+        "description": "I don't set up security questions for my online accounts.",
+        "power": 1
+      }
+    ],
+    "explanation": "The hacker tries to guess security questions for unauthorized account access. Using unique and less guessable security questions enhances account security."
+  },
+  {
+    "hackerCard": {
+      "description": "I attempted to intercept your sensitive data by setting up a fake public Wi-Fi network.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "I never connect to public Wi-Fi networks without a VPN.",
+        "power": 4
+      },
+      {
+        "description": "I connect to public Wi-Fi without considering potential security risks.",
+        "power": 2
+      },
+      {
+        "description": "I always connect to any available public Wi-Fi network.",
+        "power": 1
+      }
+    ],
+    "explanation": "The hacker sets up a fake public Wi-Fi network to intercept data. Using caution and a VPN when connecting to public Wi-Fi helps protect sensitive information."
+  },
+  {
+    "hackerCard": {
+      "description": "I attempted to gain unauthorized access to your accounts by exploiting weak authentication protocols.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "I use multi-factor authentication for all my accounts.",
+        "power": 4
+      },
+      {
+        "description": "I use single-factor authentication for most of my accounts.",
+        "power": 2
+      },
+      {
+        "description": "I find multi-factor authentication inconvenient and don't use it.",
+        "power": 1
+      }
+    ],
+    "explanation": "The hacker exploits weak authentication protocols for unauthorized access. Using multi-factor authentication adds an extra layer of protection to accounts."
+  },
+  {
+    "hackerCard": {
+      "description": "I attempted to gain access to your computer by exploiting unsecured remote desktop connections.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "I use secure remote desktop connections with strong passwords.",
+        "power": 4
+      },
+      {
+        "description": "I use remote desktop connections without paying much attention to security measures.",
+        "power": 2
+      },
+      {
+        "description": "I don't use remote desktop connections; they are too complicated.",
+        "power": 1
+      }
+    ],
+    "explanation": "The hacker exploits unsecured remote desktop connections to access the target's computer. Using secure connections with strong passwords enhances computer security."
+  }
+]
