@@ -84,8 +84,8 @@
   [ngClass]="{ 'player-color': winner.name === 'Player', 'hacker-color': winner.name === 'Hacker', 'none-color': winner.name === 'None' }">
   <div style="display: flex; flex-direction: column; align-items: center;">
     <span class="winner-message">{{ winner.message }}</span>
-    <button class="restart" *ngIf="difficulty === 'scenario_tutorial'" [routerLink]="'/home'">End Tutorial</button>
-    <button class="restart" *ngIf="difficulty != 'scenario_tutorial'" (click)="restartGame()">Play Again</button>
+    <button class="restart" *ngIf="difficulty === 'tutorial'" [routerLink]="'/home'">End Tutorial</button>
+    <button class="restart" *ngIf="difficulty != 'tutorial'" (click)="restartGame()">Play Again</button>
   </div>
 </div>
 

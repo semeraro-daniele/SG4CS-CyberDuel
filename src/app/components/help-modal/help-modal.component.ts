@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-help-modal',
@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class HelpModalComponent {
   @Input() isModalOpen: boolean = true;
   @Output() closeEmit = new EventEmitter<void>();
-
+ 
   currentScreenIndex: number = 0;
 
   screens = [
@@ -49,6 +49,7 @@ export class HelpModalComponent {
 
   closeModal() {
     this.isModalOpen = false;
+    this.resetModal();
     this.closeEmit.emit();
   }
 }
