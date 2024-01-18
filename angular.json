@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "SG4CS:build:production"
+              "buildTarget": "SG4CS:build:production"
             },
             "development": {
-              "browserTarget": "SG4CS:build:development"
+              "buildTarget": "SG4CS:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SG4CS:build"
+            "buildTarget": "SG4CS:build"
           }
         },
         "test": {
