@@ -1,15 +1,19 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-settings-modal',
   templateUrl: './settings-modal.component.html',
 })
-export class SettingsModalComponent {
+export class SettingsModalComponent implements OnInit{
   @Input() isModalOpen: boolean = true;
   @Output() closeEmit = new EventEmitter<void>();
 
   constructor(private translate: TranslateService) {}
+
+  ngOnInit() {
+    this.setLanguage('en');
+  }
 
   currentScreenIndex: number = 0;
 

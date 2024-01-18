@@ -1,9 +1,12 @@
 {
+    "english": "English",
+    "italian": "Italian",
     "start": "Play the Game!",
     "easy": "Easy",
     "medium": "Medium",
     "hard": "Hard",
     "close": "Close",
+    "back-home": "Back to home!",
     "settings": "Settings",
     "help": "Help",
     "exit": "Exit",
@@ -15,5 +18,22 @@
     "finish": "Finish",
     "you": "You",
     "end-tutorial": "End Tutorial",
-    "play-again": "Play Again"
+    "play-again": "Play Again",
+    "language-choose": "Choose a language:",
+    "help-modal":{
+        "1": "The game consists of choosing one of the blue cards, the card you think is the most correct. Once selected, the powers of the chosen card and the powers of the hacker's card will be shown.",
+        "2": "If the powers of the chosen card are greater than the powers of the hacker's card, the hacker will lose life points corresponding to the difference in powers between the cards.",
+        "3": "Otherwise, if the powers of the hacker's card are greater than the powers of the chosen card, you will lose life points corresponding to the difference in powers between the cards.",
+        "4": "The game ends when one of the two teams loses all the life points or the questions will be finished. Let's play and make the right decisions!"
+    },
+    "exit-modale": "Are you sure you want to leave the game?",
+    "error-page": {
+        "not-found": "Page Not Found!",
+        "scenario-not-found-title": "Error loading scenario",
+        "scenario-not-found-body": "The game has occurred an error uploading the scenario. Confirming will take you back to the home screen."
+    },
+    "exit-modal":{
+        "title": "Exit",
+        "body": "Are you sure you want to leave the game?"
+    }
 }

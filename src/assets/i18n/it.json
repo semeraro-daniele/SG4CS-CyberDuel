@@ -1,9 +1,12 @@
 {
+    "english": "Inglese",
+    "italian": "Italiano",
     "start": "Inizia a Giocare!",
     "easy": "Semplice",
     "medium": "Medio",
     "hard": "Difficile",
     "close": "Chiudi",
+    "back-home": "Torna alla home!",
     "settings": "Impostazioni",
     "help": "Aiuto",
     "exit": "Esci",
@@ -15,6 +18,22 @@
     "finish": "Fine",
     "you": "Tu",
     "end-tutorial": "Fine Tutorial",
-    "play-again": "GIoca di nuovo"
-
+    "play-again": "GIoca di nuovo",
+    "language-choose": "Scegli una lingua:",
+    "help-modal": {
+        "1": "Il gioco consiste nello scegliere tra una delle carte blu, la carta che ritieni più corretta. Una volta selezionata verranno mostrati i poteri della carta scelta e i poteri della carta dell'hacker.",
+        "2": "Se i poteri della carta scelta sono maggiori dei poteri della carta dell'hacker, l'hacker perderà punti vita corrispondenti alla differenza di poteri tra le carte.",
+        "3": "Altrimenti, se i poteri della carta dell'hacker sono maggiori dei poteri della carta scelta, perderai punti vita corrispondenti alla differenza di poteri tra le carte.",
+        "4": "Il gioco termina quando una delle due squadre perde tutti i punti vita oppure le domande saranno finite. Giochiamo e prendiamo le giuste decisioni!"
+    },
+    "exit-modale": "Sei sicuro di voler abbandonare il gioco?",
+    "error-page": {
+        "not-found": "Pagina non trovata!",
+        "scenario-not-found-title": "Errore durante il caricamento dello scenario",
+         "scenario-not-found-body": "Si è verificato un errore nel gioco durante il caricamento dello scenario. Confermando tornerai alla schermata principale."
+    },
+    "exit-modal":{
+        "title": "Esci",
+        "body": "Sei sicuro di voler abbandonare il gioco?"
+    }
 }

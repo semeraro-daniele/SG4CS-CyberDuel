@@ -5,22 +5,22 @@
 
       <!-- Modal head -->
       <div class="modal-header">
-        <p class="modal-header-title">Settings</p>
+        <p class="modal-header-title">{{ 'settings' | translate }}</p>
       </div>
 
       <!-- Modal body -->
       <div class="modal-body" style="text-align: center;">
-        <p>Choose a language:</p>
+        <p>{{ 'language-choose' | translate }}</p>
         <div class="button-container">
-          <button (click)="setLanguage('en')">English</button>
+          <button (click)="setLanguage('en')">{{ 'english' | translate }}</button>
           <div style="padding-left: 2rem; padding-right: 2rem;"></div>
-          <button (click)="setLanguage('it')">Italiano</button>
+          <button (click)="setLanguage('it')">{{ 'italian' | translate }}</button>
         </div>
       </div>
 
       <!-- Button Container -->
       <div class="button-container" style="padding-top: 2rem;">
-        <button (click)="closeModal()">Close</button>
+        <button (click)="closeModal()">{{ 'close' | translate }}</button>
       </div>
     </div>
   </div>

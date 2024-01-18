@@ -100,12 +100,12 @@
 
       <!-- Modal head -->
       <div class="modal-header">
-        <p class="modal-header-title">Exit</p>
+        <p class="modal-header-title">{{ 'exit-modal.title' | translate }}</p>
       </div>
 
       <!-- Modal body -->
       <div class="modal-body" style="text-align: center;">
-        <p>Are you sure you want to leave the game?</p>
+        <p>{{ 'exit-modal.body' | translate }}</p>
       </div>
 
       <!-- Button Container -->
@@ -126,17 +126,17 @@
 
       <!-- Modal head -->
       <div class="modal-header">
-        <p class="modal-header-title">Error loading scenario</p>
+        <p class="modal-header-title">{{ 'error-page.scenario-not-found-title' | translate }}</p>
       </div>
 
       <!-- Modal body -->
       <div class="modal-body" style="text-align: center;">
-        <p>The game has occurred an error uploading the scenario. Confirming will take you back to the home screen.</p>
+        <p>{{ 'error-page.scenario-not-found-body' | translate }}</p>
       </div>
 
       <!-- Button Container -->
       <div class="button-container">
-        <button (click)="responseExitModal(true)">Home</button>
+        <button (click)="responseExitModal(true)">{{ 'back-home' | translate }}</button>
       </div>
 
     </div>

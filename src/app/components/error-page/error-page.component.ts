@@ -5,3 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './error-page.component.html'
 })
 export class ErrorPageComponent { }
+
