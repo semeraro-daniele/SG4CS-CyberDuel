@@ -1,23 +1,296 @@
 [
   {
     "hackerCard": {
-      "description": "Domanda Hacker",
+      "description": "Ho pubblicato contenuti dannosi su di te sui social media per molestarti e metterti in imbarazzo.",
       "power": 4
     },
     "playerCards": [
       {
-        "description": "Risposta A",
+        "description": "Rivedo e modifico regolarmente le mie impostazioni sulla privacy dei social media.",
         "power": 5
       },
       {
-        "description": "Risposta B",
+        "description": "Controllo o aggiorno raramente le mie impostazioni sulla privacy dei social media.",
         "power": 3
       },
       {
-        "description": "Risposta C",
+        "description": "Non utilizzo i social media né condivido informazioni personali online.",
         "power": 1
       }
     ],
-    "explanation": "Spiegazione"
+    "explanation": "L'hacker è coinvolto in atti di cyberbullismo pubblicando contenuti dannosi. Controllare e modificare regolarmente le impostazioni sulla privacy dei social media aiuta a prevenire tali attacchi."
+  },
+  {
+    "hackerCard": {
+      "description": "Ti ho inviato un'e-mail fingendo di essere un collega e chiedendo informazioni aziendali sensibili.",
+      "power": 3
+    },
+    "playerCards": [
+      {
+        "description": "Verifico sempre l'identità del mittente prima di condividere informazioni sensibili.",
+        "power": 5
+      },
+      {
+        "description": "A volte fornisco informazioni sensibili senza verificare il mittente.",
+        "power": 4
+      },
+      {
+        "description": "Condivido liberamente informazioni sensibili in risposta alle richieste via email.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker tenta il phishing fingendosi un collega. La verifica dell'identità dei mittenti delle e-mail è fondamentale per impedire la condivisione non autorizzata delle informazioni."
+  },
+  {
+    "hackerCard": {
+      "description": "Ho avuto accesso ai tuoi dati personali senza il tuo consenso, violando le normative GDPR.",
+      "power": 3
+    },
+    "playerCards": [
+      {
+        "description": "Sono ben informato sulla normativa GDPR e gestisco attivamente le mie impostazioni sulla privacy dei dati.",
+        "power": 5
+      },
+      {
+        "description": "Conosco il GDPR ma raramente controllo o aggiorno le mie impostazioni sulla privacy dei dati.",
+        "power": 3
+      },
+      {
+        "description": "Non ho familiarità con le normative GDPR e non gestisco le mie impostazioni sulla privacy dei dati.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker viola le normative GDPR accedendo ai dati personali senza consenso. Essere informati e gestire attivamente le impostazioni sulla privacy dei dati è essenziale per la conformità."
+  },
+  {
+    "hackerCard": {
+      "description": "Ho indovinato la tua password e ho ottenuto l'accesso non autorizzato ai tuoi account.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "Utilizzo password complesse e univoche per tutti i miei account.",
+        "power": 4
+      },
+      {
+        "description": "Ogni tanto cambio le mie password, ma non sono molto forti.",
+        "power": 3
+      },
+      {
+        "description": "Utilizzo la stessa password su più account.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker ottiene l'accesso non autorizzato indovinando la password. L'utilizzo di password complesse e univoche migliora la sicurezza dell'account."
+  },
+  {
+    "hackerCard": {
+      "description": "Ho ascoltato di nascosto la tua rete Wi-Fi non protetta e monitorato la tua attività su Internet.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "Utilizzo sempre una rete Wi-Fi sicura e protetta da password.",
+        "power": 4
+      },
+      {
+        "description": "Utilizzo reti Wi-Fi aperte senza considerare i rischi per la sicurezza.",
+        "power": 2
+      },
+      {
+        "description": "Non utilizzo reti Wi-Fi; preferisco i dati mobili per l'accesso a Internet.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker intercetta una rete Wi-Fi non protetta per monitorare l'attività Internet. L'utilizzo di reti Wi-Fi sicure e protette da password aiuta a prevenire l'accesso non autorizzato."
+  },
+  {
+    "hackerCard": {
+      "description": "Ho installato software dannoso sul tuo computer per ottenere il controllo sul tuo sistema.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "Aggiorno regolarmente il mio software antivirus ed eseguo scansioni del sistema.",
+        "power": 4
+      },
+      {
+        "description": "Ho un software antivirus ma raramente aggiorno o scansiono il mio sistema.",
+        "power": 3
+      },
+      {
+        "description": "Non utilizzo software antivirus; rallenta il mio computer.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker installa software dannoso per controllare il sistema del bersaglio. L'aggiornamento regolare del software antivirus e l'esecuzione di scansioni del sistema migliorano la sicurezza."
+  },
+  {
+    "hackerCard": {
+      "description": "Ho tentato di accedere al tuo account utilizzando varie password comuni.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "Abilito l'autenticazione a due fattori per tutti i miei account.",
+        "power": 4
+      },
+      {
+        "description": "Utilizzo password comuni su più account.",
+        "power": 2
+      },
+      {
+        "description": "Trovo scomoda l'autenticazione a due fattori e non la uso.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker prova password comuni per ottenere un accesso non autorizzato. L'abilitazione dell'autenticazione a due fattori aggiunge un ulteriore livello di sicurezza agli account."
+  },
+  {
+    "hackerCard": {
+      "description": "Ti ho inviato un collegamento che, se cliccato, installerebbe malware sul tuo dispositivo.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "Non clicco mai su collegamenti provenienti da fonti sconosciute o non attendibili.",
+        "power": 4
+      },
+      {
+        "description": "A volte clicco sui link senza verificarne l'autenticità.",
+        "power": 3
+      },
+      {
+        "description": "Clicco su qualsiasi link interessante che trovo online.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker tenta di installare malware tramite un collegamento ingannevole. Evitare di fare clic su collegamenti provenienti da fonti sconosciute è fondamentale per prevenire infezioni da malware."
+  },
+  {
+    "hackerCard": {
+      "description": "Ho usato un attacco di forza bruta per ottenere l'accesso al tuo account email.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "Utilizzo password complesse con un mix di lettere, numeri e simboli.",
+        "power": 4
+      },
+      {
+        "description": "Utilizzo password semplici e facili da ricordare.",
+        "power": 2
+      },
+      {
+        "description": "Utilizzo la stessa password per tutti i miei account di posta elettronica.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker utilizza un attacco di forza bruta per decifrare le password. L'utilizzo di password complesse e univoche migliora la sicurezza dell'account e-mail."
+  },
+  {
+    "hackerCard": {
+      "description": "Ho tentato di ottenere un accesso non autorizzato alla tua rete sfruttando vulnerabilità senza patch.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "Aggiorno regolarmente il software e applico patch di sicurezza alla mia rete.",
+        "power": 4
+      },
+      {
+        "description": "Aggiorno il software occasionalmente ma non presto molta attenzione alle patch di sicurezza.",
+        "power": 3
+      },
+      {
+        "description": "Aggiorno raramente il software; richiede molto tempo.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker sfrutta le vulnerabilità senza patch per accedere alla rete del bersaglio. L'aggiornamento regolare del software e l'applicazione delle patch di sicurezza sono fondamentali per la sicurezza della rete."
+  },
+  {
+    "hackerCard": {
+      "description": "Ho tentato di indovinare le tue domande di sicurezza per ottenere l'accesso ai tuoi account online.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "Utilizzo domande di sicurezza uniche con risposte che solo io conosco.",
+        "power": 4
+      },
+      {
+        "description": "Utilizzo domande di sicurezza comuni con risposte facili da indovinare.",
+        "power": 2
+      },
+      {
+        "description": "Non imposto domande di sicurezza per i miei account online.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker tenta di indovinare le domande di sicurezza per l'accesso non autorizzato all'account. L'utilizzo di domande di sicurezza uniche e meno indovinabili migliora la sicurezza dell'account."
+  },
+  {
+    "hackerCard": {
+      "description": "Ho tentato di intercettare i tuoi dati sensibili configurando una falsa rete Wi-Fi pubblica.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "Non mi connetto mai alle reti Wi-Fi pubbliche senza una VPN.",
+        "power": 4
+      },
+      {
+        "description": "Mi connetto al Wi-Fi pubblico senza considerare i potenziali rischi per la sicurezza.",
+        "power": 2
+      },
+      {
+        "description": "Mi collego sempre a qualsiasi rete Wi-Fi pubblica disponibile.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker configura una falsa rete Wi-Fi pubblica per intercettare i dati. Usare cautela e una VPN durante la connessione al Wi-Fi pubblico aiuta a proteggere le informazioni sensibili."
+  },
+  {
+    "hackerCard": {
+      "description": "Ho tentato di ottenere un accesso non autorizzato ai tuoi account sfruttando protocolli di autenticazione deboli.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "Utilizzo l'autenticazione a più fattori per tutti i miei account.",
+        "power": 4
+      },
+      {
+        "description": "Utilizzo l'autenticazione a fattore singolo per la maggior parte dei miei account.",
+        "power": 2
+      },
+      {
+        "description": "Trovo scomoda l'autenticazione a più fattori e non la uso.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker sfrutta protocolli di autenticazione deboli per l'accesso non autorizzato. L'uso dell'autenticazione a più fattori aggiunge un ulteriore livello di protezione agli account."
+  },
+  {
+    "hackerCard": {
+      "description": "Ho tentato di accedere al tuo computer sfruttando connessioni desktop remote non protette.",
+      "power": 2
+    },
+    "playerCards": [
+      {
+        "description": "Utilizzo connessioni desktop remote sicure con password complesse.",
+        "power": 4
+      },
+      {
+        "description": "Utilizzo connessioni desktop remote senza prestare molta attenzione alle misure di sicurezza.",
+        "power": 2
+      },
+      {
+        "description": "Non utilizzo le connessioni desktop remoto; sono troppo complicate.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker sfrutta connessioni desktop remote non protette per accedere al computer della vittima. L'utilizzo di connessioni sicure con password complesse migliora la sicurezza del computer."
   }
 ]

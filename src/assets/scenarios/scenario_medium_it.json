@@ -1,23 +1,296 @@
 [
   {
     "hackerCard": {
-      "description": "Domanda Hacker",
+      "description": "Ho diffuso informazioni false su di te online per danneggiare la tua reputazione.",
       "power": 4
     },
     "playerCards": [
       {
-        "description": "Risposta A",
+        "description": "Controllo regolarmente la mia presenza online per eventuali informazioni false.",
         "power": 5
       },
       {
-        "description": "Risposta B",
+        "description": "Ignoro le voci online e le false informazioni sul mio conto.",
         "power": 3
       },
       {
-        "description": "Risposta C",
+        "description": "Condivido i miei dati personali online senza considerare le conseguenze.",
+        "power": 2
+      }
+    ],
+    "explanation": "L'hacker tenta di danneggiare la tua reputazione attraverso informazioni false. Il monitoraggio e la risoluzione delle informazioni false aiutano a proteggere la tua immagine online."
+  },
+  {
+    "hackerCard": {
+      "description": "Invio e-mail ingannevoli fingendo di essere un'entità affidabile per rubare informazioni sensibili.",
+      "power": 3
+    },
+    "playerCards": [
+      {
+        "description": "Controllo sempre gli indirizzi dei mittenti e-mail per verificarne la legittimità.",
+        "power": 5
+      },
+      {
+        "description": "Occasionalmente fornisco informazioni sensibili in risposta a email che sembrano affidabili.",
+        "power": 3
+      },
+      {
+        "description": "Non presto mai attenzione agli indirizzi dei mittenti e-mail e condivido liberamente informazioni sensibili.",
         "power": 1
       }
     ],
-    "explanation": "Spiegazione"
+    "explanation": "L'hacker utilizza tattiche di phishing per indurre le persone a rivelare informazioni sensibili. La verifica degli indirizzi dei mittenti delle e-mail è fondamentale per evitare di cadere vittima di tali attacchi."
+  },
+  {
+    "hackerCard": {
+      "description": "Accedo e utilizzo i tuoi dati personali senza il tuo consenso, violando le normative GDPR.",
+      "power": 3
+    },
+    "playerCards": [
+      {
+        "description": "Sono ben informato sulle normative GDPR e mi assicuro che i miei dati siano gestiti in modo responsabile.",
+        "power": 4
+      },
+      {
+        "description": "Sono a conoscenza del GDPR, ma non assumo attivamente misure per salvaguardare i miei dati personali.",
+        "power": 3
+      },
+      {
+        "description": "Non sono a conoscenza del GDPR e condivido i dati personali senza preoccupazioni.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker viola le normative GDPR accedendo ai dati personali senza consenso. Comprendere e aderire ai principi GDPR è essenziale per proteggere le informazioni personali."
+  },
+  {
+    "hackerCard": {
+      "description": "Cerco di aggirare i sistemi di autenticazione per ottenere l'accesso non autorizzato ai tuoi account.",
+      "power": 3
+    },
+    "playerCards": [
+      {
+        "description": "Utilizzo l'autenticazione a due fattori su tutti i miei account per una maggiore sicurezza.",
+        "power": 5
+      },
+      {
+        "description": "Mi affido alle password tradizionali senza misure di autenticazione aggiuntive.",
+        "power": 3
+      },
+      {
+        "description": "Non utilizzo alcuna forma di autenticazione perché è troppo scomoda.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker mira a bypassare l'autenticazione, sottolineando l'importanza di misure di sicurezza aggiuntive come l'autenticazione a due fattori per proteggere gli account."
+  },
+  {
+    "hackerCard": {
+      "description": "Conduco un attacco man-in-the-middle per intercettare e alterare la comunicazione tra due parti.",
+      "power": 4
+    },
+    "playerCards": [
+      {
+        "description": "Utilizzo canali di comunicazione crittografati per prevenire attacchi man-in-the-middle.",
+        "power": 5
+      },
+      {
+        "description": "Sono consapevole dei rischi delle comunicazioni non protette, ma non utilizzo sempre la crittografia.",
+        "power": 3
+      },
+      {
+        "description": "Non considero mai la sicurezza dei miei canali di comunicazione e utilizzo qualsiasi metodo disponibile.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker intercetta e altera la comunicazione in un attacco man-in-the-middle. L'utilizzo di canali di comunicazione crittografati migliora la sicurezza e impedisce manomissioni non autorizzate."
+  },
+  {
+    "hackerCard": {
+      "description": "Tento di sfruttare una vulnerabilità del software per ottenere il controllo sul tuo computer.",
+      "power": 4
+    },
+    "playerCards": [
+      {
+        "description": "Aggiorno regolarmente il mio software per correggere le vulnerabilità e rafforzare la sicurezza.",
+        "power": 5
+      },
+      {
+        "description": "Aggiorno il mio software occasionalmente, ma non sono severo al riguardo.",
+        "power": 3
+      },
+      {
+        "description": "Non mi prendo mai la briga di aggiornare il mio software; richiede troppo tempo.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker sfrutta le vulnerabilità del software per ottenere il controllo. L'aggiornamento regolare del software è fondamentale per correggere le vulnerabilità e mantenere un sistema sicuro."
+  },
+  {
+    "hackerCard": {
+      "description": "Cerco di decifrare la tua password utilizzando varie tecniche.",
+      "power": 3
+    },
+    "playerCards": [
+      {
+        "description": "Utilizzo password complesse difficili da decifrare.",
+        "power": 5
+      },
+      {
+        "description": "Ho un mix di password forti e deboli nei miei account.",
+        "power": 3
+      },
+      {
+        "description": "Utilizzo password semplici e facilmente indovinabili per comodità.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker tenta di decifrare le password, evidenziando l'importanza di utilizzare password complesse e complesse per una maggiore sicurezza."
+  },
+  {
+    "hackerCard": {
+      "description": "Sfrutto una vulnerabilità della rete per ottenere un accesso non autorizzato a dati sensibili.",
+      "power": 4
+    },
+    "playerCards": [
+      {
+        "description": "Conduco regolarmente controlli di sicurezza della rete per identificare e correggere le vulnerabilità.",
+        "power": 5
+      },
+      {
+        "description": "Sono a conoscenza delle vulnerabilità della rete ma non le affronto attivamente.",
+        "power": 3
+      },
+      {
+        "description": "Non presto attenzione alla sicurezza della rete; non è una priorità per me.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker sfrutta le vulnerabilità della rete per l'accesso non autorizzato. Condurre controlli regolari sulla sicurezza della rete è fondamentale per identificare e affrontare potenziali punti deboli."
+  },
+  {
+    "hackerCard": {
+      "description": "Sto tentando di installare malware sul tuo dispositivo tramite un allegato email dannoso.",
+      "power": 3
+    },
+    "playerCards": [
+      {
+        "description": "Non apro mai allegati email provenienti da fonti sconosciute o sospette.",
+        "power": 5
+      },
+      {
+        "description": "A volte apro gli allegati e-mail senza controllare attentamente la fonte.",
+        "power": 3
+      },
+      {
+        "description": "Apro liberamente gli allegati e-mail senza considerare i potenziali rischi.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker utilizza un allegato e-mail dannoso per installare malware. Evitare allegati e-mail sconosciuti o sospetti è fondamentale per prevenire infezioni da malware."
+  },
+  {
+    "hackerCard": {
+      "description": "Cerco di accedere ai tuoi account sfruttando password deboli o predefinite.",
+      "power": 3
+    },
+    "playerCards": [
+      {
+        "description": "Utilizzo password uniche e complesse per tutti i miei account.",
+        "power": 5
+      },
+      {
+        "description": "Ho un mix di password forti e deboli nei miei account.",
+        "power": 3
+      },
+      {
+        "description": "Utilizzo password predefinite o facilmente indovinabili per comodità.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker sfrutta password deboli o predefinite per ottenere accesso non autorizzato. L'utilizzo di password complesse e univoche per tutti gli account è fondamentale per la sicurezza dell'account."
+  },
+  {
+    "hackerCard": {
+      "description": "Tento di interrompere i tuoi servizi online attraverso un attacco DDoS.",
+      "power": 4
+    },
+    "playerCards": [
+      {
+        "description": "Utilizzo i servizi di protezione DDoS per mitigare potenziali attacchi ai miei servizi online.",
+        "power": 5
+      },
+      {
+        "description": "Sono a conoscenza degli attacchi DDoS ma non adotto misure specifiche per proteggere i miei servizi online.",
+        "power": 3
+      },
+      {
+        "description": "Non so cosa siano gli attacchi DDoS e non li considero una minaccia.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker tenta un attacco DDoS per interrompere i servizi online. L'utilizzo dei servizi di protezione DDoS aiuta a mitigare l'impatto di tali attacchi."
+  },
+  {
+    "hackerCard": {
+      "description": "Cerco di indurti con l'inganno a rivelare informazioni sensibili spacciandoti per un'entità attendibile.",
+      "power": 3
+    },
+    "playerCards": [
+      {
+        "description": "Verifico l'identità delle persone prima di condividere informazioni sensibili.",
+        "power": 5
+      },
+      {
+        "description": "A volte condivido informazioni sensibili senza confermare l'identità del richiedente.",
+        "power": 3
+      },
+      {
+        "description": "Condivido liberamente informazioni sensibili senza verificare l'identità della persona che le richiede.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker si spaccia per un'entità fidata per indurre le persone a rivelare informazioni sensibili. Verificare l'identità dei richiedenti è fondamentale per evitare di cadere vittime di tali tattiche."
+  },
+  {
+    "hackerCard": {
+      "description": "Cerco di ottenere un accesso non autorizzato al tuo sistema sfruttando le vulnerabilità del software.",
+      "power": 4
+    },
+    "playerCards": [
+      {
+        "description": "Aggiorno regolarmente il mio software per correggere le vulnerabilità e rafforzare la sicurezza.",
+        "power": 5
+      },
+      {
+        "description": "Aggiorno il mio software occasionalmente, ma non sono severo al riguardo.",
+        "power": 3
+      },
+      {
+        "description": "Non mi prendo mai la briga di aggiornare il mio software; richiede troppo tempo.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker sfrutta le vulnerabilità del software per l'accesso non autorizzato. L'aggiornamento regolare del software è fondamentale per correggere le vulnerabilità e mantenere un sistema sicuro."
+  },
+  {
+    "hackerCard": {
+      "description": "Cerco di accedere ai tuoi account sfruttando password deboli o predefinite.",
+      "power": 3
+    },
+    "playerCards": [
+      {
+        "description": "Utilizzo password uniche e complesse per tutti i miei account.",
+        "power": 5
+      },
+      {
+        "description": "Ho un mix di password forti e deboli nei miei account.",
+        "power": 3
+      },
+      {
+        "description": "Utilizzo password predefinite o facilmente indovinabili per comodità.",
+        "power": 1
+      }
+    ],
+    "explanation": "L'hacker sfrutta password deboli o predefinite per ottenere accesso non autorizzato. L'utilizzo di password complesse e univoche per tutti gli account è fondamentale per la sicurezza dell'account."
   }
 ]

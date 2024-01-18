@@ -1,23 +1,23 @@
 [
   {
     "hackerCard": {
-      "description": "Domanda Hacker",
-      "power": 4
+      "description": "Ho inviato un'e-mail falsa dalla tua banca chiedendo i dettagli del tuo conto.",
+      "power": 3
     },
     "playerCards": [
       {
-        "description": "Risposta A",
+        "description": "Ho controllato l'indirizzo email: il messaggio non è arrivato dalla mia banca.",
         "power": 5
       },
       {
-        "description": "Risposta B",
+        "description": "Non fornisco mai informazioni personali in risposta a un'e-mail.",
         "power": 3
       },
       {
-        "description": "Risposta C",
+        "description": "Ho inviato i dettagli che hai richiesto in modo che tu possa controllare il mio account.",
         "power": 1
       }
     ],
-    "explanation": "Spiegazione"
+    "explanation": "Il phishing è un tentativo fraudolento di ottenere informazioni sensibili, come nomi utente, password e dettagli finanziari, simulando una comunicazione affidabile."
   }
 ]
