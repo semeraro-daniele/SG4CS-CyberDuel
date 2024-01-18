@@ -7,7 +7,6 @@
     </h1>
 
     <div class="hacker-area-menu-option">
-      <button class="restart hacker-area-option" (click)="handleSettingsModal(true)">{{ 'settings' | translate }}</button>
       <button class="restart hacker-area-option" (click)="handleHelpModal(true)">{{ 'help' | translate }}</button>
       <button class="restart hacker-area-option" (click)="handleExitModal(true)">{{ 'exit' | translate }}</button>
     </div>
@@ -15,7 +14,7 @@
     <app-help-modal [isModalOpen]="isHelpModalOpen" (closeEmit)="handleHelpModal(false)">
     </app-help-modal>
 
-    <app-settings-modal [isModalOpen]="isSettingsModalOpen" (closeEmit)="handleSettingsModal(false)">
+    <app-settings-modal *ngIf="isSettingsModalOpen" [isModalOpen]="isSettingsModalOpen" (closeEmit)="handleSettingsModal(false)">
     </app-settings-modal>
 
     <div class="stats hacker-stats">

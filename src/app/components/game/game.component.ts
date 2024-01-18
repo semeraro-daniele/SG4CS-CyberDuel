@@ -23,10 +23,10 @@ export class GameComponent implements OnInit {
     private router: Router,
     private languageService: LanguageService,
     private translate: TranslateService
-  ) {  }
+  ) {}
 
   ngOnInit() {
-    this.language = this.languageService.getLanguage()
+    this.language = this.languageService.getLanguage();
     this.translate.use(this.language);
     this.difficulty = this.route.snapshot.url[1].path;
     switch (this.route.snapshot.url[1].path) {
@@ -36,7 +36,14 @@ export class GameComponent implements OnInit {
         this.hackerLife = 1;
         this.hackerStartLife = this.hackerLife;
         this.isHelpModalOpen = true;
-        this.isSettingsModalOpen = true;
+
+        const visitedTutorial = localStorage.getItem('visitedTutorial');
+
+        if (!visitedTutorial) {
+          this.isSettingsModalOpen = true;
+          localStorage.setItem('visitedTutorial', 'true');
+        }
+
         break;
       case 'easy':
         this.playerLife = 15;
@@ -102,7 +109,9 @@ export class GameComponent implements OnInit {
 
   loadScenarios() {
     this.scenarioService
-      .getScenario(this.scenarioDifficulty + this.difficulty + '_' + this.language)
+      .getScenario(
+        this.scenarioDifficulty + this.difficulty + '_' + this.language
+      )
       .subscribe(
         (scenarios) => {
           if (scenarios && scenarios.length > 0) {

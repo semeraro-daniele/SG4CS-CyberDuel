@@ -1,5 +1,4 @@
 <div class="game-board">
-
     <div class="hacker-area">
         <h1 style="padding-bottom: 2rem;">
             <strong>{{ 'welcome' | translate }}</strong>
@@ -7,7 +6,8 @@
     </div>
 
     <div class="player-area">
-        <button class="start-game" style="cursor: pointer;" (click)="handleModal(true)">{{ 'start' | translate }}</button>
+        <button class="start-game" style="cursor: pointer;" (click)="handleModal(true)">{{ 'start' | translate
+            }}</button>
         <div style="display: flex; align-items: end;">
             <i>Credits: Alemanno Giuseppe, Caiulo Fabio, Semeraro Daniele</i>
         </div>
@@ -28,13 +28,22 @@
             <div class="modal-body" style="align-items: center;">
 
                 <div style="display: flex; flex-direction: row; justify-items: center; padding-bottom: 2rem;">
-                    <button (click)="startGame('easy')" style="width: 8rem; margin: 0.5rem;">{{ 'easy' | translate }}</button>
-                    <button (click)="startGame('medium')" style="width: 8rem; margin: 0.5rem;">{{ 'medium' | translate }}</button>
-                    <button (click)="startGame('hard')" style="width: 8rem; margin: 0.5rem;">{{ 'hard' | translate }}</button>
+                    <button (click)="startGame('easy')" style="width: 8rem; margin: 0.5rem;">{{ 'easy' | translate
+                        }}</button>
+                    <button (click)="startGame('medium')" style="width: 8rem; margin: 0.5rem;">{{ 'medium' | translate
+                        }}</button>
+                    <button (click)="startGame('hard')" style="width: 8rem; margin: 0.5rem;">{{ 'hard' | translate
+                        }}</button>
                 </div>
 
-                <button (click)="startGame('tutorial')" style="width: 8rem; margin: 0.5rem;">Tutorial</button>
+                <div style="display: flex; flex-direction: row; justify-items: center; padding-bottom: 2rem;">
+                    <button (click)="startGame('tutorial')" style="width: 8rem; margin: 0.5rem;">Tutorial</button>
+                    <button class="restart hacker-area-option" (click)="handleSettingsModal(true)"
+                        style="margin: 0.5rem;">{{ 'settings' | translate }}</button>
 
+                    <app-settings-modal [isModalOpen]="isSettingsModalOpen" (closeEmit)="handleSettingsModal(false)">
+                    </app-settings-modal>
+                </div>
             </div>
 
             <!-- Button Container -->
