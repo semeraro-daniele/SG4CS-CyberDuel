@@ -84,6 +84,7 @@ export class GameComponent implements OnInit {
   scenarioIndex: number = 0;
   usedScenarioIndices: number[] = [];
 
+  isSettingsModalOpen: boolean = false;
   isHelpModalOpen: boolean = false;
   isExitModalOpen: boolean = false;
   isErrorScenarioModalOpen: boolean = false;
@@ -288,6 +289,18 @@ export class GameComponent implements OnInit {
 
     // Start a new game
     this.startGame();
+  }
+
+  handleSettingsModal(value: boolean) {
+    this.isSettingsModalOpen = value;
+  }
+
+  responseSettingsModal(value: boolean) {
+    if (value) {
+      this.handleSettingsModal(false);
+    } else {
+      this.handleSettingsModal(false);
+    }
   }
 
   handleHelpModal(value: boolean) {

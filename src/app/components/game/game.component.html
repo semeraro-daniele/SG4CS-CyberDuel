@@ -7,6 +7,7 @@
     </h1>
 
     <div class="hacker-area-menu-option">
+      <button class="restart hacker-area-option" (click)="handleSettingsModal(true)">Settings</button>
       <button class="restart hacker-area-option" (click)="handleHelpModal(true)">Help</button>
       <button class="restart hacker-area-option" (click)="handleExitModal(true)">Exit</button>
     </div>
@@ -86,6 +87,35 @@
     <span class="winner-message">{{ winner.message }}</span>
     <button class="restart" *ngIf="difficulty === 'tutorial'" [routerLink]="'/home'">End Tutorial</button>
     <button class="restart" *ngIf="difficulty != 'tutorial'" (click)="restartGame()">Play Again</button>
+  </div>
+</div>
+
+<!-- Modal Settings -->
+<div class="modal" [ngClass]="{'open': isSettingsModalOpen}">
+  <div class="modal-overlay" [ngClass]="{'open': isSettingsModalOpen}">
+    <div class="modal-content" style="background-color: #004999">
+
+      <!-- Modal head -->
+      <div class="modal-header">
+        <p class="modal-header-title">Settings</p>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body" style="text-align: center;">
+        <p>Change language:</p>
+        <div class="button-container">
+          <button (click)="responseSettingsModal(false)">English</button>
+          <div style="padding-left: 2rem; padding-right: 2rem;"></div>
+          <button (click)="responseSettingsModal(false)">Italiano</button>
+        </div>
+      </div>
+
+      <!-- Button Container -->
+      <div class="button-container" style="padding-top: 2rem;">
+        <button (click)="responseSettingsModal(false)">Close</button>
+      </div>
+
+    </div>
   </div>
 </div>
 
