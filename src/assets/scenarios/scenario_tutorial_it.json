@@ -1,0 +1,23 @@
+[
+  {
+    "hackerCard": {
+      "description": "Domanda Hacker",
+      "power": 4
+    },
+    "playerCards": [
+      {
+        "description": "Risposta A",
+        "power": 5
+      },
+      {
+        "description": "Risposta B",
+        "power": 3
+      },
+      {
+        "description": "Risposta C",
+        "power": 1
+      }
+    ],
+    "explanation": "Spiegazione"
+  }
+]

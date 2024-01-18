@@ -26,7 +26,8 @@ export class GameComponent implements OnInit {
   ) {  }
 
   ngOnInit() {
-    this.translate.use(this.languageService.getLanguage());
+    this.language = this.languageService.getLanguage()
+    this.translate.use(this.language);
     this.difficulty = this.route.snapshot.url[1].path;
     switch (this.route.snapshot.url[1].path) {
       case 'tutorial':
@@ -59,6 +60,7 @@ export class GameComponent implements OnInit {
     this.loadScenarios();
   }
 
+  language: string = '';
   difficulty: string = '';
   scenarioDifficulty: string = 'scenario_';
   playerLife: number = 0;
@@ -100,7 +102,7 @@ export class GameComponent implements OnInit {
 
   loadScenarios() {
     this.scenarioService
-      .getScenario(this.scenarioDifficulty + this.difficulty)
+      .getScenario(this.scenarioDifficulty + this.difficulty + '_' + this.language)
       .subscribe(
         (scenarios) => {
           if (scenarios && scenarios.length > 0) {
@@ -262,15 +264,15 @@ export class GameComponent implements OnInit {
       this.playerLife = 0;
       this.isGameFinished = true;
       this.winner.name = 'Hacker';
-      this.winner.message = 'Game Over: You got Hacked!';
+      this.winner.message = this.translate.instant('gameOverMessage');
     } else if (this.hackerLife <= 0) {
       this.hackerLife = 0;
       this.isGameFinished = true;
       this.winner.name = 'Player';
-      this.winner.message = 'Good Job: You Defeated the Hacker!';
+      this.winner.message = this.translate.instant('victoryMessage');
     } else {
       this.winner.name = 'None';
-      this.winner.message = 'Tie: Nobody Won the Match!';
+      this.winner.message = this.translate.instant('tieMessage');
     }
   }
 

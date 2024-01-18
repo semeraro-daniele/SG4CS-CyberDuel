@@ -20,6 +20,9 @@
     "finish": "Finish",
     "you": "You",
     "end-tutorial": "End Tutorial",
+    "gameOverMessage": "Game Over: You got Hacked!",
+    "victoryMessage": "Good Job: You Defeated the Hacker!",
+    "tieMessage": "Tie: Nobody Won the Match!",
     "play-again": "Play Again",
     "language-choose": "Choose a language:",
     "hacker-card": {

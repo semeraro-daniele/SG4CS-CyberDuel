@@ -20,7 +20,10 @@
     "finish": "Fine",
     "you": "Tu",
     "end-tutorial": "Fine Tutorial",
-    "play-again": "GIoca di nuovo",
+    "gameOverMessage": "Gameover: sei stato hackerato!",
+    "victoryMessage": "Buon lavoro: hai sconfitto l'hacker!",
+    "tieMessage": "Pareggio: nessuno ha vinto la partita!",
+    "play-again": "Gioca di nuovo",
     "language-choose": "Scegli una lingua:",
     "hacker-card": {
         "title": "CARTE DELL'HACKER",
