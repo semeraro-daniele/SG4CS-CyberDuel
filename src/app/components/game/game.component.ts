@@ -87,6 +87,7 @@ export class GameComponent implements OnInit {
   isCompareCards: number = 0;
   isNextButton: boolean = false;
   isGameFinished: boolean = false; // Game finished
+  roundCount: number = 1
 
   hackerCard: ICard = { description: '', power: 0 };
   playerCards: ICard[] = [];
@@ -183,6 +184,7 @@ export class GameComponent implements OnInit {
       this.isExplanationCard = false;
 
       this.scenarioIndex = this.scenarioIndex + 1;
+      this.roundCount += 1;
 
       if (this.scenarioIndex < this.scenarios.length) {
         const nextScenario = this.scenarios[this.scenarioIndex];
@@ -252,7 +254,6 @@ export class GameComponent implements OnInit {
     }
 
     this.updateScores();
-
     this.isNextButton = true;
   }
 
@@ -306,6 +307,7 @@ export class GameComponent implements OnInit {
     this.isSelectedCard = false;
     this.scenarioIndex = 0;
     this.isExitModalOpen = false;
+    this.roundCount = 1;
 
     this.ngOnInit();
 

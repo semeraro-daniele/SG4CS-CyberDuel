@@ -3,7 +3,11 @@
   <div class="hacker-area">
 
     <h1>
-      <strong>{{ 'hacker-card.title' | translate }}</strong> <br /> {{ 'hacker-card.body' | translate }}
+      <strong>{{ 'hacker-card.title' | translate }}</strong>
+      <br />
+      {{ 'hacker-card.body' | translate }}
+      <br />
+      <h3>Round: {{ roundCount }}</h3>
     </h1>
 
     <div class="hacker-area-menu-option">
@@ -14,7 +18,8 @@
     <app-help-modal [isModalOpen]="isHelpModalOpen" (closeEmit)="handleHelpModal(false)">
     </app-help-modal>
 
-    <app-settings-modal *ngIf="isSettingsModalOpen" [isModalOpen]="isSettingsModalOpen" (closeEmit)="handleSettingsModal(false)">
+    <app-settings-modal *ngIf="isSettingsModalOpen" [isModalOpen]="isSettingsModalOpen"
+      (closeEmit)="handleSettingsModal(false)">
     </app-settings-modal>
 
     <div class="stats hacker-stats">
@@ -77,7 +82,8 @@
       <div class="power">{{ card.power }}</div>
     </div>
 
-    <button class="next-turn" [ngClass]="{ 'display-block': isNextButton }" (click)="nextTurn()">{{ 'next' | translate }}!</button>
+    <button class="next-turn" [ngClass]="{ 'display-block': isNextButton }" (click)="nextTurn()">{{ 'next' | translate
+      }}!</button>
     <!--[disabled]="isNextButton || roundFinished"-->
 
   </div>
@@ -87,8 +93,10 @@
   [ngClass]="{ 'player-color': winner.name === 'Player', 'hacker-color': winner.name === 'Hacker', 'none-color': winner.name === 'None' }">
   <div style="display: flex; flex-direction: column; align-items: center;">
     <span class="winner-message">{{ winner.message | translate }}</span>
-    <button class="restart" *ngIf="difficulty === 'tutorial'" [routerLink]="'/home'">{{ 'end-tutorial' | translate }}</button>
-    <button class="restart" *ngIf="difficulty != 'tutorial'" (click)="restartGame()">{{ 'play-again' | translate }}</button>
+    <button class="restart" *ngIf="difficulty === 'tutorial'" [routerLink]="'/home'">{{ 'end-tutorial' | translate
+      }}</button>
+    <button class="restart" *ngIf="difficulty != 'tutorial'" (click)="restartGame()">{{ 'play-again' | translate
+      }}</button>
   </div>
 </div>
 
