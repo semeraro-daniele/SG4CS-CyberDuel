@@ -8,6 +8,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { GameComponent } from './components/game/game.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HelpModalComponent } from './components/help-modal/help-modal.component';
+import { SettingsModalComponent } from './components/settings-modal/settings-modal.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HelpModalComponent } from './components/help-modal/help-modal.component
     ErrorPageComponent,
     HomePageComponent,
     GameComponent,
-    HelpModalComponent
+    HelpModalComponent,
+    SettingsModalComponent
   ],
   imports: [
     BrowserModule,

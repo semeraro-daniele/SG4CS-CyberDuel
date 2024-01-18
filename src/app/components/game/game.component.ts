@@ -4,6 +4,7 @@ import { ICard } from 'src/app/models/card';
 import { IScenario } from 'src/app/models/scenario';
 import { ScenarioService } from 'src/app/services/scenario.service';
 import { HelpModalComponent } from '../help-modal/help-modal.component';
+import { SettingsModalComponent } from '../settings-modal/settings-modal.component';
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
@@ -11,6 +12,7 @@ import { HelpModalComponent } from '../help-modal/help-modal.component';
 })
 export class GameComponent implements OnInit {
   @ViewChild(HelpModalComponent) helpModal!: HelpModalComponent;
+  @ViewChild(HelpModalComponent) settingModal!: SettingsModalComponent;
 
   constructor(
     private scenarioService: ScenarioService,
@@ -27,6 +29,7 @@ export class GameComponent implements OnInit {
         this.hackerLife = 1;
         this.hackerStartLife = this.hackerLife;
         this.isHelpModalOpen = true;
+        this.isSettingsModalOpen = true;
         break;
       case 'easy':
         this.playerLife = 15;
@@ -293,13 +296,8 @@ export class GameComponent implements OnInit {
 
   handleSettingsModal(value: boolean) {
     this.isSettingsModalOpen = value;
-  }
-
-  responseSettingsModal(value: boolean) {
-    if (value) {
-      this.handleSettingsModal(false);
-    } else {
-      this.handleSettingsModal(false);
+    if (this.isSettingsModalOpen) {
+      this.settingModal.resetModal();
     }
   }
 

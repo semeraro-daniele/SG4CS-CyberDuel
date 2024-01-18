@@ -1,0 +1,27 @@
+<!-- Modal -->
+<div class="modal" [ngClass]="{'open': isModalOpen}">
+  <div class="modal-overlay" [ngClass]="{'open': isModalOpen}">
+    <div class="modal-content">
+
+      <!-- Modal head -->
+      <div class="modal-header">
+        <p class="modal-header-title">Settings</p>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body" style="text-align: center;">
+        <p>Change language:</p>
+        <div class="button-container">
+          <button (click)="settingLanguage('en')">English</button>
+          <div style="padding-left: 2rem; padding-right: 2rem;"></div>
+          <button (click)="settingLanguage('it')">Italiano</button>
+        </div>
+      </div>
+
+      <!-- Button Container -->
+      <div class="button-container" style="padding-top: 2rem;">
+        <button (click)="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
