@@ -22,27 +22,6 @@
   },
   {
     "hackerCard": {
-      "description": "Ti ho inviato un'e-mail fingendo di essere un collega e chiedendo informazioni aziendali sensibili.",
-      "power": 3
-    },
-    "playerCards": [
-      {
-        "description": "Verifico sempre l'identità del mittente prima di condividere informazioni sensibili.",
-        "power": 5
-      },
-      {
-        "description": "A volte fornisco informazioni sensibili senza verificare il mittente.",
-        "power": 4
-      },
-      {
-        "description": "Condivido liberamente informazioni sensibili in risposta alle richieste via email.",
-        "power": 1
-      }
-    ],
-    "explanation": "L'hacker tenta il phishing fingendosi un collega. La verifica dell'identità dei mittenti delle e-mail è fondamentale per impedire la condivisione non autorizzata delle informazioni."
-  },
-  {
-    "hackerCard": {
       "description": "Ho avuto accesso ai tuoi dati personali senza il tuo consenso, violando le normative GDPR.",
       "power": 3
     },
