@@ -5,6 +5,9 @@ import { IScenario } from 'src/app/models/scenario';
 import { ScenarioService } from 'src/app/services/scenario.service';
 import { HelpModalComponent } from '../help-modal/help-modal.component';
 import { SettingsModalComponent } from '../settings-modal/settings-modal.component';
+import { LanguageService } from 'src/app/services/language.service';
+import { TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
@@ -17,10 +20,13 @@ export class GameComponent implements OnInit {
   constructor(
     private scenarioService: ScenarioService,
     private route: ActivatedRoute,
-    private router: Router
-  ) {}
+    private router: Router,
+    private languageService: LanguageService,
+    private translate: TranslateService
+  ) {  }
 
   ngOnInit() {
+    this.translate.use(this.languageService.getLanguage());
     this.difficulty = this.route.snapshot.url[1].path;
     switch (this.route.snapshot.url[1].path) {
       case 'tutorial':
@@ -54,7 +60,7 @@ export class GameComponent implements OnInit {
   }
 
   difficulty: string = '';
-  scenarioDifficulty: string = 'scenario_'
+  scenarioDifficulty: string = 'scenario_';
   playerLife: number = 0;
   hackerLife: number = 0;
   playerPercent: number = 100;
@@ -93,23 +99,25 @@ export class GameComponent implements OnInit {
   isErrorScenarioModalOpen: boolean = false;
 
   loadScenarios() {
-    this.scenarioService.getScenario(this.scenarioDifficulty + this.difficulty).subscribe(
-      (scenarios) => {
-        if (scenarios && scenarios.length > 0) {
-          this.scenarios = scenarios;
+    this.scenarioService
+      .getScenario(this.scenarioDifficulty + this.difficulty)
+      .subscribe(
+        (scenarios) => {
+          if (scenarios && scenarios.length > 0) {
+            this.scenarios = scenarios;
 
-          this.shuffleScenarios(this.scenarios.length);
+            this.shuffleScenarios(this.scenarios.length);
 
-          this.startGame();
-        } else {
-          console.error('No scenarios available.');
+            this.startGame();
+          } else {
+            console.error('No scenarios available.');
+          }
+        },
+        (error) => {
+          this.isErrorScenarioModalOpen = true;
+          console.error('Error loading scenarios:', error);
         }
-      },
-      (error) => {
-        this.isErrorScenarioModalOpen = true;
-        console.error('Error loading scenarios:', error);
-      }
-    );
+      );
   }
 
   shuffleScenarios(n: number) {
@@ -296,9 +304,6 @@ export class GameComponent implements OnInit {
 
   handleSettingsModal(value: boolean) {
     this.isSettingsModalOpen = value;
-    if (this.isSettingsModalOpen) {
-      this.settingModal.resetModal();
-    }
   }
 
   handleHelpModal(value: boolean) {

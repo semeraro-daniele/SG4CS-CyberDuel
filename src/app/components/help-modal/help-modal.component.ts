@@ -1,11 +1,22 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-help-modal',
   templateUrl: './help-modal.component.html',
   styleUrls: ['./help-modal.component.css'],
 })
-export class HelpModalComponent {
+export class HelpModalComponent  implements OnInit {
+  constructor(
+    private languageService: LanguageService,
+    private translate: TranslateService
+  ) {}
+
+  ngOnInit() {
+    this.translate.use(this.languageService.getLanguage());
+  }
+  
   @Input() isModalOpen: boolean = true;
   @Output() closeEmit = new EventEmitter<void>();
   currentScreenIndex: number = 0;

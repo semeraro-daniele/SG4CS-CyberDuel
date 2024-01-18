@@ -1,7 +1,9 @@
 {
     "english": "Inglese",
     "italian": "Italiano",
+    "welcome": "Benvenuto a CyberDuel!",
     "start": "Inizia a Giocare!",
+    "difficulty": "Difficoltà",
     "easy": "Semplice",
     "medium": "Medio",
     "hard": "Difficile",
