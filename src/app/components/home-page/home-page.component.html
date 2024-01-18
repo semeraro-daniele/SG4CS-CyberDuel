@@ -28,9 +28,9 @@
             <div class="modal-body" style="align-items: center;">
 
                 <div style="display: flex; flex-direction: row; justify-items: center; padding-bottom: 2rem;">
-                    <button (click)="startGame('easy')" style="width: 8rem; margin: 0.5rem;">Easy</button>
-                    <button (click)="startGame('medium')" style="width: 8rem; margin: 0.5rem;">Medium</button>
-                    <button (click)="startGame('hard')" style="width: 8rem; margin: 0.5rem;">Hard</button>
+                    <button (click)="startGame('easy')" style="width: 8rem; margin: 0.5rem;">{{ 'easy' | translate }}</button>
+                    <button (click)="startGame('medium')" style="width: 8rem; margin: 0.5rem;">{{ 'medium' | translate }}</button>
+                    <button (click)="startGame('hard')" style="width: 8rem; margin: 0.5rem;">{{ 'hard' | translate }}</button>
                 </div>
 
                 <button (click)="startGame('tutorial')" style="width: 8rem; margin: 0.5rem;">Tutorial</button>
