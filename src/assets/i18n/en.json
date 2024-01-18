@@ -22,6 +22,10 @@
     "end-tutorial": "End Tutorial",
     "play-again": "Play Again",
     "language-choose": "Choose a language:",
+    "hacker-card": {
+        "title": "HACKER CARDS",
+        "body": "Choose the best card to stop the hackers' attack"
+    },
     "help-modal":{
         "1": "The game consists of choosing one of the blue cards, the card you think is the most correct. Once selected, the powers of the chosen card and the powers of the hacker's card will be shown.",
         "2": "If the powers of the chosen card are greater than the powers of the hacker's card, the hacker will lose life points corresponding to the difference in powers between the cards.",

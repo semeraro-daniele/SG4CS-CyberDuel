@@ -22,6 +22,10 @@
     "end-tutorial": "Fine Tutorial",
     "play-again": "GIoca di nuovo",
     "language-choose": "Scegli una lingua:",
+    "hacker-card": {
+        "title": "CARTE DELL'HACKER",
+        "body": "Scegli la miglior carta per fermare l'attacco dell'hacker"
+    },
     "help-modal": {
         "1": "Il gioco consiste nello scegliere tra una delle carte blu, la carta che ritieni più corretta. Una volta selezionata verranno mostrati i poteri della carta scelta e i poteri della carta dell'hacker.",
         "2": "Se i poteri della carta scelta sono maggiori dei poteri della carta dell'hacker, l'hacker perderà punti vita corrispondenti alla differenza di poteri tra le carte.",
