@@ -6,9 +6,16 @@ import { RouterModule } from '@angular/router';
 import { AppRoutes } from './app.routes';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { GameComponent } from './components/game/game.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HelpModalComponent } from './components/help-modal/help-modal.component';
 import { SettingsModalComponent } from './components/settings-modal/settings-modal.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -22,7 +29,14 @@ import { SettingsModalComponent } from './components/settings-modal/settings-mod
   imports: [
     BrowserModule,
     RouterModule.forRoot(AppRoutes),
-    HttpClientModule
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,9 +7,9 @@
     </h1>
 
     <div class="hacker-area-menu-option">
-      <button class="restart hacker-area-option" (click)="handleSettingsModal(true)">Settings</button>
-      <button class="restart hacker-area-option" (click)="handleHelpModal(true)">Help</button>
-      <button class="restart hacker-area-option" (click)="handleExitModal(true)">Exit</button>
+      <button class="restart hacker-area-option" (click)="handleSettingsModal(true)">{{ 'settings' | translate }}</button>
+      <button class="restart hacker-area-option" (click)="handleHelpModal(true)">{{ 'help' | translate }}</button>
+      <button class="restart hacker-area-option" (click)="handleExitModal(true)">{{ 'exit' | translate }}</button>
     </div>
 
     <app-help-modal [isModalOpen]="isHelpModalOpen" (closeEmit)="handleHelpModal(false)">
@@ -64,7 +64,7 @@
       </div>
       <div class="life-total">{{ playerLife }}</div>
       <div class="thumbnail" [ngClass]="{ 'ouch': isCompareCards == 1}">👦🏻</div>
-      <div class="name">You</div>
+      <div class="name">{{ 'you' | translate }}</div>
     </div>
 
     <div class="card player-card player-color showCard" [ngClass]="{
@@ -78,7 +78,7 @@
       <div class="power">{{ card.power }}</div>
     </div>
 
-    <button class="next-turn" [ngClass]="{ 'display-block': isNextButton }" (click)="nextTurn()">Next!</button>
+    <button class="next-turn" [ngClass]="{ 'display-block': isNextButton }" (click)="nextTurn()">{{ 'next' | translate }}!</button>
     <!--[disabled]="isNextButton || roundFinished"-->
 
   </div>
@@ -88,8 +88,8 @@
   [ngClass]="{ 'player-color': winner.name === 'Player', 'hacker-color': winner.name === 'Hacker', 'none-color': winner.name === 'None' }">
   <div style="display: flex; flex-direction: column; align-items: center;">
     <span class="winner-message">{{ winner.message }}</span>
-    <button class="restart" *ngIf="difficulty === 'tutorial'" [routerLink]="'/home'">End Tutorial</button>
-    <button class="restart" *ngIf="difficulty != 'tutorial'" (click)="restartGame()">Play Again</button>
+    <button class="restart" *ngIf="difficulty === 'tutorial'" [routerLink]="'/home'">{{ 'next' | translate }}</button>
+    <button class="restart" *ngIf="difficulty != 'tutorial'" (click)="restartGame()">{{ 'next' | translate }}</button>
   </div>
 </div>
 
@@ -110,9 +110,9 @@
 
       <!-- Button Container -->
       <div class="button-container">
-        <button (click)="responseExitModal(false)">No</button>
+        <button (click)="responseExitModal(false)">{{ 'no' | translate }}</button>
         <div style="padding-left: 5rem; padding-right: 5rem;"></div>
-        <button (click)="responseExitModal(true)">Yes</button>
+        <button (click)="responseExitModal(true)">{{ 'yes' | translate }}</button>
       </div>
 
     </div>

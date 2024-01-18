@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-settings-modal',
@@ -7,6 +8,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class SettingsModalComponent {
   @Input() isModalOpen: boolean = true;
   @Output() closeEmit = new EventEmitter<void>();
+
+  constructor(private translate: TranslateService) {}
 
   currentScreenIndex: number = 0;
 
@@ -39,8 +42,7 @@ export class SettingsModalComponent {
     this.closeEmit.emit();
   }
 
-  settingLanguage(language: string){
-    
+  setLanguage(language: string) {
+    this.translate.use(language);
   }
-  
 }

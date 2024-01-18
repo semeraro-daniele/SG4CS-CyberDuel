@@ -1,0 +1,19 @@
+{
+    "start": "Play the Game!",
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard",
+    "close": "Close",
+    "settings": "Settings",
+    "help": "Help",
+    "exit": "Exit",
+    "yes": "Yes",
+    "no": "No",
+    "skip": "Skip",
+    "back": "Back",
+    "next": "Next",
+    "finish": "Finish",
+    "you": "You",
+    "end-tutorial": "End Tutorial",
+    "play-again": "Play Again"
+}

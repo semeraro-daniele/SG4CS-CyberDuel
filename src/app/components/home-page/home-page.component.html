@@ -7,7 +7,7 @@
     </div>
 
     <div class="player-area">
-        <button class="start-game" style="cursor: pointer;" (click)="handleModal(true)">Play the Game</button>
+        <button class="start-game" style="cursor: pointer;" (click)="handleModal(true)">{{ 'start' | translate }}</button>
         <div style="display: flex; align-items: end;">
             <i>Credits: Alemanno Giuseppe, Caiulo Fabio, Semeraro Daniele</i>
         </div>
@@ -39,7 +39,7 @@
 
             <!-- Button Container -->
             <div class="button-container" style="display: flex; justify-content: space-around;">
-                <button (click)="handleModal(false)">Close</button>
+                <button (click)="handleModal(false)">{{ 'close' | translate }}</button>
             </div>
 
         </div>
