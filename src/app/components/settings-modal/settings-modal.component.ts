@@ -28,5 +28,6 @@ export class SettingsModalComponent implements OnInit {
   setLanguage(language: string) {
     this.translate.use(language);
     this.languageService.setLanguage(language);
+    this.closeModal();
   }
 }
