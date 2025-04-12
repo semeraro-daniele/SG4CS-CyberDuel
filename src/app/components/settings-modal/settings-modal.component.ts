@@ -3,8 +3,9 @@ import { TranslateService } from '@ngx-translate/core';
 import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
-  selector: 'app-settings-modal',
-  templateUrl: './settings-modal.component.html',
+    selector: 'app-settings-modal',
+    templateUrl: './settings-modal.component.html',
+    standalone: false
 })
 export class SettingsModalComponent implements OnInit {
   @Input() isModalOpen: boolean = true;

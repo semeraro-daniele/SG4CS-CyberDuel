@@ -3,9 +3,10 @@ import { TranslateService } from '@ngx-translate/core';
 import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
-  selector: 'app-help-modal',
-  templateUrl: './help-modal.component.html',
-  styleUrls: ['./help-modal.component.css'],
+    selector: 'app-help-modal',
+    templateUrl: './help-modal.component.html',
+    styleUrls: ['./help-modal.component.css'],
+    standalone: false
 })
 export class HelpModalComponent  implements OnInit {
   constructor(

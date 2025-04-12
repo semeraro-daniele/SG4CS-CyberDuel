@@ -3,8 +3,9 @@ import { TranslateService } from '@ngx-translate/core';
 import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
-  selector: 'app-error-page',
-  templateUrl: './error-page.component.html',
+    selector: 'app-error-page',
+    templateUrl: './error-page.component.html',
+    standalone: false
 })
 export class ErrorPageComponent implements OnInit {
   constructor(
