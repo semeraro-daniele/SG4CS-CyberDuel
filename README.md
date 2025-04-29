@@ -39,7 +39,7 @@ In the project directory, you can run the following commands:
 
 This project relies on the following dependencies:
 
-* Angular: `^19.2.6`
+* Angular: `^19.2.9`
 * @ngx-translate/core: `^15.0.0`
 * RxJS: `~7.8.0`
 * TypeScript: `~5.5.4`
@@ -49,7 +49,7 @@ This project relies on the following dependencies:
 
 For development, the project includes the following:
 
-* @angular-devkit/build-angular: `^19.2.7`
+* @angular-devkit/build-angular: `^19.2.9`
 * Karma: `~6.4.0`
 * Jasmine: `~4.5.0`
 * Webpack Dev Middleware: `^7.1.1`
