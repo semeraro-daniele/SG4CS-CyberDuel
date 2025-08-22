@@ -39,9 +39,9 @@
     "error-page": {
         "not-found": "Pagina non trovata!",
         "scenario-not-found-title": "Errore durante il caricamento dello scenario",
-         "scenario-not-found-body": "Si è verificato un errore nel gioco durante il caricamento dello scenario. Confermando tornerai alla schermata principale."
+        "scenario-not-found-body": "Si è verificato un errore nel gioco durante il caricamento dello scenario. Confermando tornerai alla schermata principale."
     },
-    "exit-modal":{
+    "exit-modal": {
         "title": "Esci",
         "body": "Sei sicuro di voler abbandonare il gioco?"
     }

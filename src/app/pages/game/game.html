@@ -15,12 +15,13 @@
       <button class="restart hacker-area-option" (click)="handleExitModal(true)">{{ 'exit' | translate }}</button>
     </div>
 
-    <app-help-modal [isModalOpen]="isHelpModalOpen" (closeEmit)="handleHelpModal(false)">
-    </app-help-modal>
+    <app-help [isModalOpen]="isHelpModalOpen" (closeEmit)="handleHelpModal(false)">
+    </app-help>
 
-    <app-settings-modal *ngIf="isSettingsModalOpen" [isModalOpen]="isSettingsModalOpen"
-      (closeEmit)="handleSettingsModal(false)">
-    </app-settings-modal>
+    @if (isSettingsModalOpen) {
+    <app-settings [isModalOpen]="isSettingsModalOpen" (closeEmit)="handleSettingsModal(false)">
+    </app-settings>
+    }
 
     <div class="stats hacker-stats">
       <div class="life-bar">
@@ -89,16 +90,23 @@
   </div>
 </div>
 
-<div class="winner-section" *ngIf="isWinnerMessage" [ngStyle]="{ 'display': 'flex' }"
+@if (isWinnerMessage) {
+<div class="winner-section" [ngStyle]="{ 'display': 'flex' }"
   [ngClass]="{ 'player-color': winner.name === 'Player', 'hacker-color': winner.name === 'Hacker', 'none-color': winner.name === 'None' }">
   <div style="display: flex; flex-direction: column; align-items: center;">
     <span class="winner-message">{{ winner.message | translate }}</span>
-    <button class="restart" *ngIf="difficulty === 'tutorial'" [routerLink]="'/home'">{{ 'end-tutorial' | translate
+    @if (difficulty === 'tutorial') { <button class="restart" [routerLink]="'/home'">{{ 'end-tutorial' |
+      translate
       }}</button>
-    <button class="restart" *ngIf="difficulty != 'tutorial'" (click)="restartGame()">{{ 'play-again' | translate
+      }
+    @if (difficulty != 'tutorial') {
+    <button class="restart" (click)="restartGame()">{{ 'play-again' | translate
       }}</button>
+    }
   </div>
 </div>
+}
+
 
 <!-- Modal Exit -->
 <div class="modal" [ngClass]="{'open': isExitModalOpen}">
