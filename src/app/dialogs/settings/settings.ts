@@ -1,20 +1,27 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { LanguageService } from 'src/app/services/language.service';
+import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+
+import { LanguageService } from '../../services/language.service';
 
 @Component({
-    selector: 'app-settings-modal',
-    templateUrl: './settings-modal.component.html',
-    standalone: false
+  standalone: true,
+  imports: [
+    CommonModule,
+    TranslateModule
+  ],
+  selector: 'app-settings',
+  templateUrl: './settings.html'
 })
-export class SettingsModalComponent implements OnInit {
+export class Settings implements OnInit {
   @Input() isModalOpen: boolean = true;
   @Output() closeEmit = new EventEmitter<void>();
 
   constructor(
     private translate: TranslateService,
     private languageService: LanguageService
-  ) {}
+  ) { }
 
   ngOnInit() {
     const savedLanguage = this.languageService.getLanguage();

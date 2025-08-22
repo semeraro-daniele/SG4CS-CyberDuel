@@ -39,20 +39,19 @@ In the project directory, you can run the following commands:
 
 This project relies on the following dependencies:
 
-* Angular: `^19.2.9`
-* @ngx-translate/core: `^15.0.0`
+* Angular: `^20.2.0`
+* @ngx-translate/core: `^17.0.0`
 * RxJS: `~7.8.0`
-* TypeScript: `~5.5.4`
+* TypeScript: `~5.8.2`
 * Zone.js: `~0.15.0`
 
 ## Development Dependencies
 
 For development, the project includes the following:
 
-* @angular-devkit/build-angular: `^19.2.9`
+* @angular/build : `^20.2.0`
 * Karma: `~6.4.0`
-* Jasmine: `~4.5.0`
-* Webpack Dev Middleware: `^7.1.1`
+* Jasmine: `~5.7.0`
 
 ## License
 

@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { ErrorPageComponent } from './components/error-page/error-page.component';
-import { HomePageComponent } from './components/home-page/home-page.component';
-import { GameComponent } from './components/game/game.component';
+import { Game } from './pages/game/game';
+import { Home } from './pages/home-page/home-page';
+import { ErrorPage } from './shared/error-page/error-page';
 
-export const AppRoutes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomePageComponent },
-  { path: 'game/:difficulty', component: GameComponent },
-  { path: '**', pathMatch: 'full', component: ErrorPageComponent }
+export const routes: Routes = [
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: 'home', component: Home },
+    { path: 'game/:difficulty', component: Game },
+    { path: '**', pathMatch: 'full', component: ErrorPage }
 ];

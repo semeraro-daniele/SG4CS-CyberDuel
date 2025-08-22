@@ -41,8 +41,8 @@
                     <button class="restart hacker-area-option" (click)="handleSettingsModal(true)"
                         style="margin: 0.5rem;">{{ 'settings' | translate }}</button>
 
-                    <app-settings-modal [isModalOpen]="isSettingsModalOpen" (closeEmit)="handleSettingsModal(false)">
-                    </app-settings-modal>
+                    <app-settings [isModalOpen]="isSettingsModalOpen" (closeEmit)="handleSettingsModal(false)">
+                    </app-settings>
                 </div>
             </div>
 

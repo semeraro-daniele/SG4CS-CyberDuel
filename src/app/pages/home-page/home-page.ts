@@ -1,23 +1,31 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
-import { LanguageService } from 'src/app/services/language.service';
-import { HelpModalComponent } from '../help-modal/help-modal.component';
-import { SettingsModalComponent } from '../settings-modal/settings-modal.component';
+
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+
+import { Help } from '../../dialogs/help/help';
+import { Settings } from '../../dialogs/settings/settings';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
-    selector: 'app-home-page',
-    templateUrl: './home-page.component.html',
-    standalone: false
+  standalone: true,
+    imports: [
+    CommonModule,
+    TranslateModule,
+    Settings
+],
+  selector: 'app-home-page',
+  templateUrl: './home-page.html'
 })
-export class HomePageComponent implements OnInit {
-  @ViewChild(HelpModalComponent) settingModal!: SettingsModalComponent;
+export class Home implements OnInit {
+  @ViewChild(Help) settingModal!: Settings;
 
   constructor(
     private router: Router,
     private languageService: LanguageService,
     private translate: TranslateService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.translate.use(this.languageService.getLanguage());

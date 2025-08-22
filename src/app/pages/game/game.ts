@@ -1,30 +1,40 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { ICard } from 'src/app/models/card';
-import { IScenario } from 'src/app/models/scenario';
-import { ScenarioService } from 'src/app/services/scenario.service';
-import { HelpModalComponent } from '../help-modal/help-modal.component';
-import { SettingsModalComponent } from '../settings-modal/settings-modal.component';
-import { LanguageService } from 'src/app/services/language.service';
-import { TranslateService } from '@ngx-translate/core';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+
+import { Help } from '../../dialogs/help/help';
+import { Settings } from '../../dialogs/settings/settings';
+import { ICard } from '../../models/card';
+import { IScenario } from '../../models/scenario';
+import { LanguageService } from '../../services/language.service';
+import { ScenarioService } from '../../services/scenario.service';
 
 @Component({
-    selector: 'app-game',
-    templateUrl: './game.component.html',
-    styleUrls: ['./game.component.css'],
-    standalone: false
+  standalone: true,
+  imports: [
+    CommonModule,
+    TranslateModule,
+    Settings,
+    RouterModule,
+    Help
+  ],
+  selector: 'app-game',
+  templateUrl: './game.html',
+  styleUrl: './game.css'
 })
-export class GameComponent implements OnInit {
-  @ViewChild(HelpModalComponent) helpModal!: HelpModalComponent;
-  @ViewChild(HelpModalComponent) settingModal!: SettingsModalComponent;
+export class Game implements OnInit {
+  @ViewChild(Help) helpModal!: Help;
+  @ViewChild(Help) settingModal!: Settings;
 
   constructor(
     private scenarioService: ScenarioService,
     private route: ActivatedRoute,
-    private router: Router,
     private languageService: LanguageService,
-    private translate: TranslateService
-  ) {}
+    private translate: TranslateService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.language = this.languageService.getLanguage();
