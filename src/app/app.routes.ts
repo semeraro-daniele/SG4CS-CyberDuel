@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { Game } from './pages/game/game';
-import { Home } from './pages/home-page/home-page';
+import { Game } from './components/game/game';
+import { Home } from './components/home-page/home-page';
 import { ErrorPage } from './shared/error-page/error-page';
 
 export const routes: Routes = [
