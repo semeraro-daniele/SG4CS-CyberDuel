@@ -1,35 +1,37 @@
 <!-- Modal -->
 <div class="modal" [ngClass]="{'open': isModalOpen}">
-    <div class="modal-overlay" [ngClass]="{'open': isModalOpen}">
-        <div class="modal-content">
+  <div class="modal-overlay" [ngClass]="{'open': isModalOpen}">
+    <div class="modal-content">
 
-            <!-- Modal head -->
-            <div class="modal-header">
-                <p class="modal-header-title" style="padding-left: 5rem;">{{ 'help' | translate }}</p>
-                <button (click)="closeModal()">{{ 'skip' | translate }}</button>
-            </div>
+      <!-- Modal head -->
+      <div class="modal-header">
+        <p class="modal-header-title" style="padding-left: 5rem;">{{ 'help' | translate }}</p>
+        <button (click)="closeModal()">{{ 'skip' | translate }}</button>
+      </div>
 
-            <!-- Modal body -->
-            <div class="modal-body">
-                <p>{{ 'help-modal.' + screens[currentScreenIndex] | translate }}</p>
-            </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+        <p>{{ 'help-modal.' + screens[currentScreenIndex] | translate }}</p>
+      </div>
 
-            <!-- Button Container -->
-            <div class="button-container">
-                <div style="display: flex; justify-content: start; width: 100%;">
-                    <button (click)="goBack()" *ngIf="currentScreenIndex > 0">{{ 'back' | translate }}</button>
-                </div>
-                <div style="display: flex; justify-content: center; width: 100%;">
-                    <span class="count-pages">{{this.currentScreenIndex+1}}/{{this.screens.length}}</span>
-                </div>
-                <div style="display: flex; justify-content: end; width: 100%;">
-                    <button (click)="goNext()">
-                        {{ currentScreenIndex === screens.length - 1 ? ('finish' | translate) : ('next' | translate) }}
-                    </button>
-                </div>
-
-            </div>
-
+      <!-- Button Container -->
+      <div class="button-container">
+        <div style="display: flex; justify-content: start; width: 100%;">
+          @if (currentScreenIndex > 0) {
+          <button (click)="goBack()">{{ 'back' | translate }}</button>
+          }
         </div>
+        <div style="display: flex; justify-content: center; width: 100%;">
+          <span class="count-pages">{{this.currentScreenIndex+1}}/{{this.screens.length}}</span>
+        </div>
+        <div style="display: flex; justify-content: end; width: 100%;">
+          <button (click)="goNext()">
+            {{ currentScreenIndex === screens.length - 1 ? ('finish' | translate) : ('next' | translate) }}
+          </button>
+        </div>
+
+      </div>
+
     </div>
+  </div>
 </div>

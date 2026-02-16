@@ -72,16 +72,18 @@
       <div class="name">{{ 'you' | translate }}</div>
     </div>
 
+    @for (card of playerCards; track card) {
     <div class="card player-card player-color showCard" [ngClass]="{
         'reveal-power': isRevealPlayerPower,
         'better-card': isCompareCards == 2 && card === selectedCard,
         'worse-card': isCompareCards == 1 && card === selectedCard,
         'tie-card': isCompareCards == 3 && card === selectedCard,
         'none-card': isWinnerMessage
-     }" *ngFor="let card of playerCards" (click)="cardClicked(card, hackerCard)">
+     }" (click)="cardClicked(card, hackerCard)">
       <div class="text">{{ card.description }}</div>
       <div class="power">{{ card.power }}</div>
     </div>
+    }
 
     <button class="next-turn" [ngClass]="{ 'display-block': isNextButton }" (click)="nextTurn()">{{ 'next' | translate
       }}!</button>
@@ -98,7 +100,7 @@
     @if (difficulty === 'tutorial') { <button class="restart" [routerLink]="'/home'">{{ 'end-tutorial' |
       translate
       }}</button>
-      }
+    }
     @if (difficulty != 'tutorial') {
     <button class="restart" (click)="restartGame()">{{ 'play-again' | translate
       }}</button>
