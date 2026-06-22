@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ChangeDetectionStrategy } from '@angular/core';
 
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -12,6 +12,7 @@ import { LanguageService } from '../../services/language.service';
     TranslateModule
   ],
   selector: 'app-settings',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './settings.html'
 })
 export class Settings implements OnInit {

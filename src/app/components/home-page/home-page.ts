@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -16,6 +16,7 @@ import { LanguageService } from '../../services/language.service';
     Settings
 ],
   selector: 'app-home-page',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './home-page.html'
 })
 export class Home implements OnInit {

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -22,6 +22,7 @@ import { ScenarioService } from '../../services/scenario.service';
   ],
   selector: 'app-game',
   templateUrl: './game.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './game.css'
 })
 export class Game implements OnInit {

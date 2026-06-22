@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ChangeDetectionStrategy } from '@angular/core';
 
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -13,6 +13,7 @@ import { LanguageService } from '../../services/language.service';
   ],
   selector: 'app-help',
   templateUrl: './help.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './help.css'
 })
 export class Help implements OnInit {

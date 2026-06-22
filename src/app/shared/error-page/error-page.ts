@@ -1,5 +1,5 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -13,6 +13,7 @@ import { LanguageService } from '../../services/language.service';
     TranslateModule
 ],
   selector: 'app-error-page',
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './error-page.html'
 })
 export class ErrorPage implements OnInit {
